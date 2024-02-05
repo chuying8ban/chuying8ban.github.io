@@ -22,6 +22,7 @@
             background-color: #fbf8cc;
             font-family: "宋体",SimSun;
         }
+
         p.b {
             color: red;
             font-size: 32px
@@ -56,20 +57,58 @@
             left: 0;
         }
 
-        #music-player {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            user-select: none;
-            cursor: grab;
+        #music-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        #music-player:hover {
-            cursor: grabbing;
+        #music-control {
+            display: none;
         }
-
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var musicContainer = document.getElementById('music-container');
+            var musicControl = document.getElementById('music-control');
+
+            var musicFiles = [
+                '/music/1.mp3',
+                '/music/2.mp3',
+                '/music/3.mp3',
+                '/music/4.mp3'
+            ];
+
+            function playRandomMusic() {
+                var randomIndex = Math.floor(Math.random() * musicFiles.length);
+                musicControl.innerHTML = '<source src="' + musicFiles[randomIndex] + '" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.';
+                musicControl.play();
+            }
+
+            playRandomMusic();  // Play a random music when the page loads
+
+            musicContainer.addEventListener('click', function () {
+                if (musicControl.style.display === 'none') {
+                    musicControl.style.display = 'block';
+                } else {
+                    musicControl.style.display = 'none';
+                }
+            });
+
+            musicControl.addEventListener('ended', function () {
+                // Play a new random music when the current one ends
+                playRandomMusic();
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -109,41 +148,22 @@
         </li>
     </ul>
 
-    <div id="music-player" draggable="true">
-        <audio controls autoplay loop>
-            <source src="/music/zhizihuakai(helin).mp3" type="audio/mp3">
-            Your browser does not support the audio tag.
-        </audio>
+    <div id="music-container">
+        <span id="music-name">随机音乐</span>
+        <audio id="music-control" controls></audio>
     </div>
 
-    <script>
-        let isDragging = false;
-        let offset = { x: 0, y: 0 };
+    <!--
+        <div id="music-player">
+            <h6>栀子花开（何炅）</h6>
+            <audio controls>
+                <source src="/music/zhizihuakai(helin).mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <div id="toggle-button" onclick="toggleMinimize()">收起</div>
+        </div>
 
-        const musicPlayer = document.getElementById('music-player');
-
-        musicPlayer.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            offset = {
-                x: e.clientX - musicPlayer.getBoundingClientRect().left,
-                y: e.clientY - musicPlayer.getBoundingClientRect().top
-            };
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                const x = e.clientX - offset.x;
-                const y = e.clientY - offset.y;
-
-                musicPlayer.style.left = `${x}px`;
-                musicPlayer.style.top = `${y}px`;
-            }
-        });
-
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-    </script>
+    -->
 
     <br />    <br />
     <br />    <br />
