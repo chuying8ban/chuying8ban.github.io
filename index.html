@@ -55,6 +55,20 @@
             top: 0;
             left: 0;
         }
+
+        #music-player {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            user-select: none;
+            cursor: grab;
+        }
+
+        #music-player:hover {
+            cursor: grabbing;
+        }
+
     </style>
 </head>
 
@@ -89,16 +103,66 @@
                 </b>
             </p>
 
-            <p class="f24 indent a">你好，这里是马鞍山二中博望分校2023届8班。2023届8班是一个充满友爱的集体，在在整个高一上学期中，我们取得了许多亮眼的成绩……</p>
+            <p class="f24 indent a">你好，这里是马鞍山二中博望分校2023届8班。2023届8班是一个充满友爱的集体，在整个高一上学期中，我们取得了许多亮眼的成绩……</p>
             <img src="/images/Guan.jpg" alt="管军帅照" />
             <p> 未完待续……</p>
         </li>
     </ul>
 
-    <audio controls>
-        <source src="/music/zhizihuakai(helin).mp3" type="audio/mpeg">
-        <embed height="50" width="200" src="/music/zhizihuakai(helin).mp3">
-    </audio>
+    <div id="music-player">
+        <audio controls autoplay loop>
+            <source src="/music/zhizihuakai(helin).mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
 
+    <script>
+        let isDragging = false;
+        let offset = { x: 0, y: 0 };
+
+        const musicPlayer = document.getElementById('music-player');
+
+        musicPlayer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offset = {
+                x: e.clientX - musicPlayer.getBoundingClientRect().left,
+                y: e.clientY - musicPlayer.getBoundingClientRect().top
+            };
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+
+            const x = e.clientX - offset.x;
+            const y = e.clientY - offset.y;
+
+            musicPlayer.style.left = `${x}px`;
+            musicPlayer.style.top = `${y}px`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+    </script>
+
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
+    <br />    <br />
 </body>
 </html >
