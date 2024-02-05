@@ -131,13 +131,13 @@
         });
 
         document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
+            if (isDragging) {
+                const x = e.clientX - offset.x;
+                const y = e.clientY - offset.y;
 
-            const x = e.clientX - offset.x;
-            const y = e.clientY - offset.y;
-
-            musicPlayer.style.left = `${x}px`;
-            musicPlayer.style.top = `${y}px`;
+                musicPlayer.style.left = `${x}px`;
+                musicPlayer.style.top = `${y}px`;
+            }
         });
 
         document.addEventListener('mouseup', () => {
