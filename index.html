@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta charset="utf-8">
     <title> 雏鹰8班官网</title>
 
     <style type="text/css">
         h1 {
-            font-size: 300%
-        }
-
-        h1 {
-            color: #000e47
-        }
-
-        h1 {
+            font-size: 300%;
+            color: #000e47;
             font-family: "黑体",SimHei;
-        }
-
-        h1 {
-            text-align: center
-        }
-
-        h1 {
+            text-align: center;
             text-decoration: underline;
-        }
-
-        h1 {
-            text-shadow: 5px 5px 5px #7382bf;
+            text-shadow: 5px 5px 5px #7382bf
         }
 
         body {
             background-color: #fffddb
+        }
+
+        p.a {
+            background-color: #fbf8cc;
+            font-family: "宋体",SimSun;
+        }
+        p.b {
+            color: red;
+            font-size: 32px
         }
 
         p.padding {
@@ -41,31 +35,62 @@
             padding-left: 50px;
         }
 
-        ul {
-            list-style-image: url('sqpurple.gif');
+        ul.a {
+            list-style-type: square;
         }
 
-        .f12 {
+        .f24 {
             font-size: 24px;
         }
 
         .indent {
             text-indent: 2em
         }
+
+        .logo-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 
 <body>
+    <a href="https://chuying8ban.github.io/">
+        <svg width="100%" height="30%">
+            <rect width="100%" height="100%" fill="red" />
+            <circle cx="100%" cy="95%" r="90" fill="blue" stroke="black" />
+            <polygon points="120,30 240,225 0,225" fill="green" />
+            <text x="50" y="100" font-family="SimHei" font-size="50"
+                  fill="white" stroke="black" stroke-width="2">
+                马鞍山二中博望分校雏鹰8班官网
+            </text>
+        </svg>
+    </a>
+        <!--
+            <div class="logo-container">
+                <figure>
+                    <img
+                     src="/images/chuying8ban.svg"
+                     alt="雏鹰8班" />
+                </figure>
+            </div>
+        -->
 
-    <h1 >马鞍山二中博望分校雏鹰8班官网</h1 >
-    <ul>
-        <li>
-            班级介绍
-            <p class="f12 indent">你好，这里是马鞍山二中博望分校雏鹰8班官网。雏鹰8班是一个充满友爱的集体，在伟大的班主任管军的带领下，创下一个又一个奇迹。</p>
-            <img src="/images/Guan.jpg" alt="管军帅照" />
-            <p> 未完待续……</p>
-        </li>
-    </ul>
+        <h1>欢迎来到马鞍山二中博望分校2023届8班</h1>
+        <ul class="a">
+            <li>
+                <p class="b">
+                    <b>
+                        班级简介
+                    </b>
+                </p>
 
-</body >
+                <p class="f24 indent a">你好，这里是马鞍山二中博望分校2023届8班。2023届8班是一个充满友爱的集体，在在整个高一上学期中，我们取得了许多亮眼的成绩……</p>
+                <img src="/images/Guan.jpg" alt="管军帅照" />
+                <p> 未完待续……</p>
+            </li>
+        </ul>
+
+</body>
 </html >
