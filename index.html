@@ -71,6 +71,7 @@
         #music-control {
             display: none;
         }
+
     </style>
 
     <script>
@@ -78,16 +79,8 @@
             var musicContainer = document.getElementById('music-container');
             var musicControl = document.getElementById('music-control');
 
-            var musicFiles = [
-                '/music/1.mp3',
-                '/music/2.mp3',
-                '/music/3.mp3',
-                '/music/4.mp3'
-            ];
-
             function playRandomMusic() {
-                var randomIndex = Math.floor(Math.random() * musicFiles.length);
-                musicControl.innerHTML = '<source src="' + musicFiles[randomIndex] + '" type="audio/mp3">' +
+                musicControl.innerHTML = '<source src="/music/1.mp3" type="audio/mp3>' +
                     'Your browser does not support the audio tag.';
                 musicControl.play();
             }
@@ -123,15 +116,6 @@
             </text>s
         </svg>
     </a>
-    <!--
-        <div class="logo-container">
-            <figure>
-                <img
-                 src="/images/chuying8ban.svg"
-                 alt="雏鹰8班" />
-            </figure>
-        </div>
-    -->
 
     <h1>欢迎来到马鞍山二中博望分校2023届8班</h1>
     <ul class="a">
@@ -141,29 +125,68 @@
                     班级简介
                 </b>
             </p>
-
-            <p class="f24 indent a">你好，这里是马鞍山二中博望分校2023届8班。2023届8班是一个充满友爱的集体，在整个高一上学期中，我们取得了许多亮眼的成绩……</p>
-            <img src="/images/Guan.jpg" alt="管军帅照" />
-            <p> 未完待续……</p>
+            <p class="f24 indent a">你好，这里是马鞍山二中博望分校2023届8班，被称为雏鹰8班。8班是一个充满友爱的集体，在整个高一上学期中，我们取得了许多亮眼的成绩……</p><hr />
         </li>
     </ul>
 
+    <ul class="a">
+        <li>
+            <p class="b">
+                <b>教师风采</b>
+            </p>
+
+            <div>
+                <ul>
+                    <li>
+                        <b>班主任&英语老师</b>
+                        <p class="f24 indent a">
+                            管军，中共党员，高级教师，马鞍山市优秀青年教师，所带班级多次被评为市级先进班集体，多篇论文、电教作品获市级一等奖。
+                            <br />
+                            <img src="/images/Guan.jpg" alt="管军" />
+                            <img src="/images/guan.png" alt="管军" />
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <b>数学老师</b>
+                        <p class="f24 indent a">
+                            束子毅，二级教师，从事教育事业以来坚信：关心可以带领每位学生走过学习和生活中的每一个减区间，换来一个更美好的极大值。
+                            <br />
+                            <img src="/images/shuziyi.png" alt="束子毅" />
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <b>语文老师</b>
+                        <p class="f24 indent a">
+                            邢运欣，中国语言文学专业硕士研究生，主要研究方向为中国古代文学。
+                            <br />
+                            <img src="/images/xingyuxin.png" alt="邢运欣" />
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+    </ul>
+
+    <p> 未完待续……</p>
+
+
     <div id="music-container">
-        <span id="music-name">音乐</span>
+        <span id="music-name">Music(点我)</span>
         <audio id="music-control" controls autoplay></audio>
+        <span id="music-name">同桌的你</span>
+        <audio id="music-control" controls></audio>
     </div>
-
-    <!--
-        <div id="music-player">
-            <h6>栀子花开（何炅）</h6>
-            <audio controls>
-                <source src="/music/zhizihuakai(helin).mp3" type="audio/mp3">
-                Your browser does not support the audio tag.
-            </audio>
-            <div id="toggle-button" onclick="toggleMinimize()">收起</div>
-        </div>
-
-    -->
 
     <br />    <br />
     <br />    <br />
