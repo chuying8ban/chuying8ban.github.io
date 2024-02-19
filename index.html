@@ -74,34 +74,6 @@
 
     </style>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var musicContainer = document.getElementById('music-container');
-            var musicControl = document.getElementById('music-control');
-
-            function playRandomMusic() {
-                musicControl.innerHTML = '<source src="/music/1.mp3" type="audio/mp3>' +
-                    'Your browser does not support the audio tag.';
-                musicControl.play();
-            }
-
-            playRandomMusic();  // Play a random music when the page loads
-
-            musicContainer.addEventListener('click', function () {
-                if (musicControl.style.display === 'none') {
-                    musicControl.style.display = 'block';
-                } else {
-                    musicControl.style.display = 'none';
-                }
-            });
-
-            musicControl.addEventListener('ended', function () {
-                // Play a new random music when the current one ends
-                playRandomMusic();
-            });
-        });
-    </script>
-
 </head>
 
 <body>
@@ -169,7 +141,7 @@
                         <p class="f24 indent a">
                             邢运欣，中国语言文学专业硕士研究生，主要研究方向为中国古代文学。
                             <br />
-                            <img src="/images/xingyuxin.png" alt="邢运欣" />
+                            <img src="/images/xingyunxin.png" alt="邢运欣" />
                         </p>
                     </li>
                 </ul>
@@ -179,14 +151,6 @@
     </ul>
 
     <p> 未完待续……</p>
-
-
-    <div id="music-container">
-        <span id="music-name">Music(点我)</span>
-        <audio id="music-control" controls autoplay></audio>
-        <span id="music-name">同桌的你</span>
-        <audio id="music-control" controls></audio>
-    </div>
 
     <br />    <br />
     <br />    <br />
