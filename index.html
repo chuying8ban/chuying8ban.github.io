@@ -3,7 +3,7 @@
 <head>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta charset="utf-8">
-    <title> 雏鹰8班官网</title>
+    <title>雏鹰8班官网</title>
 
     <style type="text/css">
         h1 {
@@ -21,6 +21,8 @@
         p.a {
             background-color: #fbf8cc;
             font-family: "宋体",SimSun;
+            text-indent: 2em;
+            font-size: 24px
         }
 
         p.b {
@@ -43,133 +45,199 @@
             list-style-type: square;
         }
 
-        .f24 {
-            font-size: 24px;
+        .main {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: visible;
         }
 
-        .indent {
-            text-indent: 2em
+        .content12 {
+            width: 1200px;
+            margin: 0 auto;
         }
 
-        .logo-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+        a {
+            color: #333;
+            text-decoration: none;
         }
 
-        #music-container {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
+            a:hover {
+                text-decoration: underline;
+            }
+
+        li {
+            list-style-type: none;
         }
 
-        #music-control {
-            display: none;
+
+        img {
+            width: auto;
+            max-width: 100%;
         }
+
+        .daohang {
+            width: 1200px;
+            float: left;
+        }
+
+            .daohang .img {
+                text-align: center;
+            }
+
+                .daohang .img img {
+                    width: 200px;
+                    height: 90px;
+                }
+
+            .daohang ul {
+                width: 1200px;
+                background: #FF0033;
+                float: left;
+            }
+
+                .daohang ul li {
+                    float: left;
+                    ;
+                    width: 100px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    padding: 10px 0px;
+                    position: relative;
+                    z-index: 3;
+                }
+
+                    .daohang ul li a.active {
+                        color: #ffffff;
+                    }
+
+                    .daohang ul li a {
+                        color: #ffffff;
+                    }
+
+            .daohang li:hover a {
+                color: #ffffff;
+            }
 
     </style>
 
 </head>
 
 <body>
-    <a href="https://chuying8ban.github.io/">
-        <svg width="100%" height="30%">
-            <rect width="100%" height="100%" fill="red" />
-            <circle cx="100%" cy="95%" r="90" fill="blue" stroke="black" />
-            <polygon points="120,30 240,225 0,225" fill="green" />
-            <text x="50" y="100" font-family="SimHei" font-size="50"
-                  fill="white" stroke="black" stroke-width="1">
-                马鞍山二中博望分校雏鹰8班官网
-            </text>s
-        </svg>
-    </a>
 
-    <h1>欢迎来到马鞍山二中博望分校2023届8班</h1>
-    <ul class="a">
-        <li>
-            <p class="b">
-                <b>
-                    班级简介
-                </b>
-            </p>
-            <p class="f24 indent a">你好，这里是马鞍山二中博望分校2023届8班，被称为雏鹰8班。8班是一个充满友爱的集体，在整个高一上学期中，我们取得了许多亮眼的成绩……</p><hr />
-        </li>
-    </ul>
+    <div class="main">
+        <a href="https://chuying8ban.github.io/">
+            <svg width="100%" height="30%">
+                <rect width="100%" height="100%" fill="red" />
+                <circle cx="100%" cy="95%" r="90" fill="blue" stroke="black" />
+                <polygon points="120,30 240,225 0,225" fill="green" />
+                <text x="50" y="100" font-family="SimHei" font-size="50"
+                      fill="white" stroke="black" stroke-width="1">
+                    马鞍山二中博望分校雏鹰8班官网
+                </text>s
+            </svg>
+        </a>
 
-    <ul class="a">
-        <li>
-            <p class="b">
-                <b>教师风采</b>
-            </p>
-
-            <div>
+        <div class="content12">
+            <div class="daohang">
                 <ul>
+                    <li class="active"><a href="https://chuying8ban.github.io/">首页</a>
                     <li>
-                        <b>班主任&英语老师</b>
-                        <p class="f24 indent a">
-                            管军，中共党员，高级教师，马鞍山市优秀青年教师，所带班级多次被评为市级先进班集体，多篇论文、电教作品获市级一等奖。
-                            <br />
-                            <img src="/images/Guan.jpg" alt="管军" />
-                            <img src="/images/guan.png" alt="管军" />
-                        </p>
+                        <a>关于</a>
+                    </li>
+                    <li>
+                        <a>班级新闻</a>
+                    </li>
+                    <li>
+                        <a>班级荣誉</a>
                     </li>
                 </ul>
             </div>
+        </div>
 
-            <div>
-                <ul>
-                    <li>
-                        <b>数学老师</b>
-                        <p class="f24 indent a">
-                            束子毅，二级教师，从事教育事业以来坚信：关心可以带领每位学生走过学习和生活中的每一个减区间，换来一个更美好的极大值。
-                            <br />
-                            <img src="/images/shuziyi.png" alt="束子毅" />
-                        </p>
-                    </li>
-                </ul>
-            </div>
+        <h1>欢迎来到马鞍山二中博望分校2023届8班</h1>
+        <ul class="a">
+            <li>
+                <p class="b">
+                    <b>
+                        班级简介
+                    </b>
+                </p>
+                <p class="a">你好，这里是马鞍山二中博望分校2023届8班，被称为雏鹰8班。8班是一个充满友爱的集体，在整个高一上学期中，我们取得了许多亮眼的成绩……</p><hr />
+            </li>
+        </ul>
 
-            <div>
-                <ul>
-                    <li>
-                        <b>语文老师</b>
-                        <p class="f24 indent a">
-                            邢运欣，中国语言文学专业硕士研究生，主要研究方向为中国古代文学。
-                            <br />
-                            <img src="/images/xingyunxin.png" alt="邢运欣" />
-                        </p>
-                    </li>
-                </ul>
-            </div>
+        <ul class="a">
+            <li>
+                <p class="b">
+                    <b>教师风采</b>
+                </p>
 
-        </li>
-    </ul>
+                <div>
+                    <ul>
+                        <li>
+                            <b>班主任&英语老师</b>
+                            <p class="a">
+                                管军，中共党员，高级教师，马鞍山市优秀青年教师，所带班级多次被评为市级先进班集体，多篇论文、电教作品获市级一等奖。
+                                <br />
+                                <img src="images/Guan.jpg" alt="管军" />
+                                <img src="images/guan.png" alt="管军" />
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
-    <p> 未完待续……</p>
+                <div>
+                    <ul>
+                        <li>
+                            <b>数学老师</b>
+                            <p class="a">
+                                束子毅，二级教师，从事教育事业以来坚信：关心可以带领每位学生走过学习和生活中的每一个减区间，换来一个更美好的极大值。
+                                <br />
+                                <img src="images/shuziyi.png" alt="束子毅" />
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
-    <br />    <br />
+                <div>
+                    <ul>
+                        <li>
+                            <b>语文老师</b>
+                            <p class="a">
+                                邢运欣，中国语言文学专业硕士研究生，主要研究方向为中国古代文学。
+                                <br />
+                                <img src="images/xingyunxin.png" alt="邢运欣" />
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+        </ul>
+
+        <p> 未完待续……</p>
+
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+        <br />    <br />
+
+    </div>
 </body>
 </html >
