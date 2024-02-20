@@ -1,0 +1,112 @@
+h1 {
+    font-size: 300%;
+    color: #000e47;
+    font-family: "ºÚÌå",SimHei;
+    text-align: center;
+    text-shadow: 5px 5px 5px #7382bf
+}
+
+body {
+    background-color: #fffddb
+}
+
+p.a {
+    background-color: #fbf8cc;
+    font-family: "ËÎÌå",SimSun;
+    text-indent: 2em;
+    font-size: 24px
+}
+
+p.b {
+    color: red;
+    font-size: 32px
+}
+
+p.padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.centre {
+    text-align: center;
+}
+
+ul.a {
+    list-style-type: square;
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.content12 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+li {
+    list-style-type: none;
+}
+
+
+img {
+    width: auto;
+    max-width: 100%;
+}
+
+.daohang {
+    width: 1200px;
+    float: left;
+}
+
+    .daohang .img {
+        text-align: center;
+    }
+
+        .daohang .img img {
+            width: 200px;
+            height: 90px;
+        }
+
+    .daohang ul {
+        width: 1200px;
+        background: #FF0033;
+        float: left;
+    }
+
+        .daohang ul li {
+            float: left;
+            ;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 10px 0px;
+            position: relative;
+            z-index: 3;
+        }
+
+            .daohang ul li a.active {
+                color: #ffffff;
+            }
+
+            .daohang ul li a {
+                color: #ffffff;
+            }
+
+    .daohang li:hover a {
+        color: #ffffff;
+    }
