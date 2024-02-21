@@ -5,10 +5,6 @@
     padding: 0;
 }
 
-body {
-    margin: 0 auto
-}
-
 .clear {
     clear: both;
 }
@@ -16,7 +12,7 @@ body {
 h1 {
     font-size: 300%;
     color: #000e47;
-    font-family: "ºÚÌå",SimHei;
+    font-family: "å®‹ä½“",SimHei;
     text-align: center;
     text-shadow: 5px 5px 5px #7382bf
 }
@@ -27,7 +23,7 @@ body {
 
 p.a {
     background-color: #fbf8cc;
-    font-family: "ËÎÌå",SimSun;
+    font-family: "å®‹ä½“",SimSun;
     text-indent: 2em;
     font-size: 24px
 }
@@ -49,7 +45,8 @@ p.padding {
 }
 
 ul.a {
-    list-style-type: square;
+    margin: 10px;
+    list-style-type: none;
 }
 
 .main {
@@ -72,10 +69,19 @@ a {
         text-decoration: underline;
     }
 
-li {
+li.dh {
     list-style-type: none;
 }
 
+    li.dh:hover {
+        background-color:black;
+    }
+
+li.content {
+    list-style-type: none;
+    padding: 10px;
+    margin: 15px;
+}
 
 img {
     width: auto;
